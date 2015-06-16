@@ -8,7 +8,8 @@ var count int64 = 0
 
 // SessionPair a structure to store session
 type SessionPair struct {
-	Did string
+	did          string
+	ClientIsJoin bool
 }
 
 func AddSP(sp SessionPair) int64 {
@@ -17,16 +18,20 @@ func AddSP(sp SessionPair) int64 {
 	return count - 1
 }
 
-func GetSP(idx int64) SessionPair {
-	return sesArr[idx]
+func GetSP(idx int64) *SessionPair {
+	return &(sesArr[idx])
 }
 
 func GetCount() int64 {
 	return count
 }
 
-func GetDid(idx int64) string {
-	return sesArr[idx].Did
+func (sp *SessionPair) GetDid() string {
+	return (*sp).did
+}
+
+func (sp *SessionPair) SetDid(mydid string) {
+	(*sp).did = mydid
 }
 
 func GetSessPair(idx int64) *SessionPair {

@@ -163,7 +163,7 @@ func (arr *SRArr) FindUnPairSess(did string) (SRNode, error) {
 		return SRNode{}, errors.New("not found")
 	}
 }
-
+//Check if did exist in search array
 func (arr *SRArr) IsDidExist(did string) bool {
 
 	findPos := sort.Search(len(*arr), func(i int) bool {

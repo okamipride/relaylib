@@ -10,6 +10,7 @@ var count int64 = 0
 type SessionPair struct {
 	did          string
 	ClientIsJoin bool
+	SessionID    int
 }
 
 func AddSP(sp SessionPair) int64 {

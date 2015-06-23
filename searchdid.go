@@ -15,7 +15,7 @@ type SRNode struct {
 
 //SRArr is a slice of SRNode(s)。 it is used for store SRNode and thus could perform variety of operation
 type SRArr []SRNode
-
+//Array used for searching only
 var searchArr SRArr
 
 // Implement sort library interface

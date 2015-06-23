@@ -19,7 +19,7 @@ Cmd example :
 */
 
 func TestMain(m *testing.M) {
-	n := 60000
+	n := 5
 	fmt.Println("run TestMain, Sample size=", n)
 	setup(n)
 	retcode := m.Run()
